@@ -24,14 +24,14 @@ print("Welcome to treasure island")
 lvl1 = input('Choose which way you want to go? "Left" or "Right: \n').lower()
 if lvl1 == "left":
     lvl2 = input('You\'ve come to a lake. There is an island in the middle '
-              'of the lake? Do you want to swim or wait for a boat "swim" or '
+              'of the lake? Do you want to swim or wait for a boat? "swim" or '
                  '"wait": \n').lower()
     if lvl2 == "wait":
         lvl3 = input('You arrive at an island which has three doors one red, '
-                     'one yellow and one blue. Which color do you choose?\n')
+                     'one yellow and one blue. Which colored door do you choose?\n')
 
         if lvl3 == "red":
-            print("Burned by fire. Game over!")
+            print("Burned by fire. Game Over!")
         elif lvl3 == "yellow":
             print("You Win!")
         elif lvl3 == "blue":
