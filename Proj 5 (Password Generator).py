@@ -21,14 +21,18 @@ nr_numbers = int(input(f"How many numbers would you like?\n"))
 # print(password)
 
 # Shuffled Output
-password = []
+password_list = []
 
 for char in range(0, nr_letters):
-    password.append(random.choice(letters))
+    password_list.append(random.choice(letters))
 for char in range(0, nr_symbols):
-    password.append(random.choice(symbols))
+    password_list.append(random.choice(symbols))
 for char in range (0, nr_numbers):
-    password.append(random.choice(numbers))
-random.shuffle(password)
-phrase = "" .join(password)
-print(phrase)
+    password_list.append(random.choice(numbers))
+random.shuffle(password_list)
+
+
+password = ""
+for char in password_list:
+    password += char
+print(f"Your password is: {password}")
