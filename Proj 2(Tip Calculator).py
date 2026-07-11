@@ -8,6 +8,6 @@ tip_as_percent = tip / 100
 total_tip = bill * tip_as_percent
 total_bill = total_tip + bill
 final_bill = total_bill / split
-tot = round(final_bill, 2)
+tot_with_tip = round(final_bill, 2)
 
-print(f"Each person should pay:${tot}")
+print(f"Each person should pay:${tot_with_tip}")
