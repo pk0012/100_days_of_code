@@ -1,10 +1,13 @@
 import random
-word_list = ["aardvark", "baboon", "camel"]
-
+from hangman_words import word_list
+from hangman_art import stages
+from hangman_art import logo
+print(logo)
 
 lives = 6
 chosen_word = random.choice(word_list)
 print(chosen_word)
+
 placeholder = ""
 for position in range(0, len(chosen_word)):
     placeholder += "_"
@@ -25,12 +28,17 @@ while not game_over:
             display += letter
         else:
             display += "_"
+
     if  guess not in chosen_word:
         lives -= 1
+        print(f"Letter {guess} was not found in the word. You lose a Life")
+
         if lives == 0:
-            game_over = True
-        print(f"You guessed incorrectly! You have {lives}/6 lives left")
+            print("*********************Game Over*********************")
+        print(f"*********************{lives}/6 lives left*********************")
+
     if "_" not in display:
         game_over = True
+        print("*********************You win!*********************")
     print(display)
     print(stages[lives])
