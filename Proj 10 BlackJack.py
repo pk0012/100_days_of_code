@@ -1,4 +1,4 @@
-import blackjack_art
+yimport blackjack_art
 import random
 
 def deal_card():
